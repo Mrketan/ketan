@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ketan Patil - Full Stack Web Developer Resume</title>
+    <style>
+        /* Base Styles - ATS Friendly */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background-color: #fff;
+            max-width: 210mm; /* A4 width */
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Headings - Clear hierarchy for ATS */
+        h1, h2, h3, h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 20px;
+            background-color: #f8f9fa;
+            padding: 8px 10px;
+            margin-top: 25px;
+            border-left: 4px solid #3498db;
+        }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+        
+        h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* Contact Info Section */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        
+        .name-title {
+            margin-bottom: 10px;
+        }
+        
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 0.5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Content Sections */
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-content {
+            padding: 0 10px;
+        }
+        
+        /* Professional Summary */
+        .summary {
+            text-align: justify;
+        }
+        
+        /* Skills Section - Optimized for ATS keyword scanning */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .skill-item {
+            background-color: #f1f8ff;
+            border: 1px solid #d1e7ff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        /* Experience Timeline */
+        .experience-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-weight: 600;
+        }
+        
+        .company {
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .job-period {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .job-details {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .job-details li {
+            margin-bottom: 5px;
+        }
+        
+        /* Project Portfolio */
+        .project-category {
+            margin-bottom: 20px;
+        }
+        
+        .project-list {
+            padding-left: 20px;
+        }
+        
+        .project-item {
+            margin-bottom: 8px;
+        }
+        
+        .project-title {
+            font-weight: 600;
+        }
+        
+        .project-description {
+            margin-left: 5px;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        /* Lists */
+        ul {
+            list-style-type: disc;
+        }
+        
+        ol {
+            list-style-type: decimal;
+        }
+        
+        li {
+            margin-left: 20px;
+            margin-bottom: 3px;
+        }
+        
+        /* Highlight Keywords for ATS */
+        .keyword {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        /* Two Column Layout for Skills */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        /* Print-friendly styles */
+        @media print {
+            body {
+                padding: 15px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 18px;
+                page-break-after: avoid;
+            }
+            
+            .experience-item, .project-category {
+                page-break-inside: avoid;
+            }
+            
+            .no-print {
+                display: none;
+            }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+            
+            .job-header {
+                flex-direction: column;
+            }
+        }
+        
+        /* ATS Optimization - Hidden elements for ATS parsing */
+        .ats-helper {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ATS Helper Section with Keywords -->
+    <div class="ats-helper">
+        PHP Developer WordPress CodeIgniter Full Stack Web Developer MySQL JavaScript HTML CSS RESTful APIs Git Agile WordPress Plugin Development WooCommerce Elementor jQuery Bootstrap React.js Payment Gateway Integration Razorpay Cashfree API Integration
+    </div>
+    
+    <!-- Contact Information -->
+    <div class="contact-info">
+        <div class="name-title">
+            <h1 class="name">KETAN PATIL</h1>
+            <div class="title">Full Stack Web Developer</div>
+        </div>
+        
+        <div class="contact-details">
+            <div class="contact-item">
+                <span>Pune, Maharashtra</span>
+            </div>
+            <div class="contact-item">
+                <span>+91 7517305365</span>
+            </div>
+            <div class="contact-item">
+                <span>patilketan1303@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span>linkedin.com/in/ketan-patil-webdeveloper</span>
+            </div>
+            <div class="contact-item">
+                <span>github.com/Mrketan</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Professional Summary -->
+    <div class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <div class="section-content summary">
+            <p>Detail-oriented <span class="keyword">Full Stack Web Developer</span> with 2+ years of progressive experience in <span class="keyword">PHP</span>-based web development, specializing in <span class="keyword">WordPress</span> and <span class="keyword">CodeIgniter 4</span> frameworks. Proven expertise in developing scalable web applications, API integrations, and e-commerce solutions. Successfully delivered 30+ projects across Fintech, Education, E-commerce, Healthcare, Real Estate, and Corporate sectors. Adept at collaborating with cross-functional teams to deliver high-quality software solutions that enhance operational efficiency and user experience. Seeking to leverage technical skills in a challenging web development role.</p>
+        </div>
+    </div>
+    
+    <!-- Technical Skills -->
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="section-content two-column">
+            <div>
+                <h4>Programming Languages:</h4>
+                <div class="skills-list">
+                    <span class="skill-item">PHP</span>
+                    <span class="skill-item">JavaScript</span>
+                    <span class="skill-item">HTML5</span>
+                    <span class="skill-item">CSS3</span>
+                    <span class="skill-item">SQL</span>
+                    <span class="skill-item">C</span>
+                    <span class="skill-item">C++</span>
+                    <span class="skill-item">Java</span>
+                </div>
+                
+                <h4>Frameworks & Libraries:</h4>
+                <div class="skills-list">
+                    <span class="skill-item">CodeIgniter 4</span>
+                    <span class="skill-item">React.js</span>
+                    <span class="skill-item">Bootstrap</span>
+                    <span class="skill-item">jQuery</span>
+                </div>
+                
+                <h4>Content Management Systems:</h4>
+                <div class="skills-list">
+                    <span class="skill-item">WordPress</span>
+                    <span class="skill-item">WooCommerce</span>
+                    <span class="skill-item">Elementor</span>
+                </div>
+            </div>
+            
+            <div>
+                <h4>Databases:</h4>
+                <div class="skills-list">
+                    <span class="skill-item">MySQL</span>
+                    <span class="skill-item">Database Design</span>
+                    <span class="skill-item">Query Optimization</span>
+                    <span class="skill-item">Data Migration</span>
+                </div>
+                
+                <h4>API Integrations:</h4>
+                <div class="skills-list">
+                    <span class="skill-item">RESTful APIs</span>
+                    <span class="skill-item">Razorpay</span>
+                    <span class="skill-item">Cashfree</span>
+                    <span class="skill-item">Banking APIs</span>
+                    <span class="skill-item">UPI</span>
+                    <span class="skill-item">BBPS</span>
+                    <span class="skill-item">RC Verification API</span>
+                    <span class="skill-item">Zoom/Google Meet Integration</span>
+                </div>
+                
+                <h4>Development Tools & Methodologies:</h4>
+                <div class="skills-list">
+                    <span class="skill-item">Git</span>
+                    <span class="skill-item">Composer</span>
+                    <span class="skill-item">npm</span>
+                    <span class="skill-item">Postman</span>
+                    <span class="skill-item">VS Code</span>
+                    <span class="skill-item">Apache/Nginx</span>
+                    <span class="skill-item">Agile Development</span>
+                    <span class="skill-item">MVC Architecture</span>
+                    <span class="skill-item">Object-Oriented Programming</span>
+                    <span class="skill-item">Responsive Web Design</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Professional Experience -->
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <div class="section-content">
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Web Developer</span> | 
+                        <span class="company">Innoplix IT Pvt. Ltd., Pune, Maharashtra</span>
+                    </div>
+                    <div class="job-period">January 2025 – Present</div>
+                </div>
+                <ul class="job-details">
+                    <li>Develop and maintain enterprise-level web applications using <span class="keyword">PHP</span>, <span class="keyword">CodeIgniter 4</span>, and <span class="keyword">MySQL</span></li>
+                    <li>Design and implement custom <span class="keyword">WordPress plugins</span> to extend platform functionality</li>
+                    <li>Integrate third-party APIs including RC Verification and payment processing systems</li>
+                    <li>Collaborate with UI/UX designers to create responsive and user-friendly interfaces</li>
+                    <li>Conduct code reviews and implement best practices for security and performance optimization</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Web Developer</span> | 
+                        <span class="company">Ozone CoWorks / Techlium Software Solutions, Remote</span>
+                    </div>
+                    <div class="job-period">July 2024 – January 2025</div>
+                </div>
+                <ul class="job-details">
+                    <li>Developed and deployed 12+ <span class="keyword">WordPress</span> websites with custom themes and functionality</li>
+                    <li>Created database schemas and implemented efficient data management solutions</li>
+                    <li>Integrated payment gateways and communication APIs to enhance platform capabilities</li>
+                    <li>Optimized website performance, resulting in 35% improvement in page load times</li>
+                    <li>Provided technical documentation and client training for system maintenance</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Web Developer</span> | 
+                        <span class="company">Sahyadree Softech Pvt Ltd, Pune, Maharashtra</span>
+                    </div>
+                    <div class="job-period">January 2024 – June 2024</div>
+                </div>
+                <ul class="job-details">
+                    <li>Executed successful migration of legacy systems to <span class="keyword">WordPress</span> platform</li>
+                    <li>Developed custom post types and taxonomies to improve content organization</li>
+                    <li>Implemented security protocols and compliance measures for web applications</li>
+                    <li>Troubleshot and resolved technical issues, maintaining 99% system uptime</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <span class="job-title">Freelance Web Developer</span> | 
+                        <span class="company">WebWave Solution</span>
+                    </div>
+                    <div class="job-period">January 2021 – Present</div>
+                </div>
+                <ul class="job-details">
+                    <li>Delivered 25+ web development projects across diverse industry sectors</li>
+                    <li>Designed and implemented custom e-commerce solutions using <span class="keyword">WordPress</span> and <span class="keyword">WooCommerce</span></li>
+                    <li>Managed project lifecycles from requirement gathering to deployment and maintenance</li>
+                    <li>Maintained client relationships with 100% satisfaction rate through effective communication</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project Portfolio -->
+    <div class="section">
+        <h2>PROJECT PORTFOLIO</h2>
+        <div class="section-content">
+            
+            <div class="project-category">
+                <h3>Fintech Solutions (3 Major Projects)</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <span class="project-title">Erupaiya.com:</span>
+                        <span class="project-description">Comprehensive wallet application with BBPS, DMT, UPI services processing 5,000+ monthly transactions</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-title">Vehicle Registration System:</span>
+                        <span class="project-description">Automated system with RC Verification API reducing processing time by 90%</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-title">Payment Integration Projects:</span>
+                        <span class="project-description">Multiple implementations of Razorpay, Cashfree, and banking APIs</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="project-category">
+                <h3>Educational Technology (2 Major Projects)</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <span class="project-title">Techfreshers.org LMS:</span>
+                        <span class="project-description">Full-featured learning platform supporting 1,000+ active users with Zoom/Google Meet integration</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-title">Course Management Systems:</span>
+                        <span class="project-description">Custom educational platforms with student tracking and certification features</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="project-category">
+                <h3>E-commerce & Retail (4 Projects)</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <span class="project-title">Tinyfinger E-commerce:</span>
+                        <span class="project-description">Complete online shopping platform with inventory and payment systems</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-title">Shopify Customizations:</span>
+                        <span class="project-description">Multiple e-commerce solutions with customized functionality</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-title">Product Catalogs:</span>
+                        <span class="project-description">Dynamic product display systems with search and filtering capabilities</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="project-category">
+                <h3>Key Project Highlights</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <span class="project-title">Erupaiya Payment Application:</span>
+                        <span class="project-description">Led development of comprehensive financial platform processing wallet transactions, bill payments, and money transfers using CodeIgniter 4, PHP, MySQL. Successfully processed 5,000+ monthly transactions with 99.8% system reliability.</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-title">Learning Management System:</span>
+                        <span class="project-description">Engineered full-featured educational platform supporting course management and student enrollment using CodeIgniter 4, PHP, MySQL, JavaScript. Supported 1,000+ active users with seamless educational experience.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Education -->
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <div class="section-content">
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">Bachelor of Engineering in Computer Science</span>
+                    </div>
+                    <div class="job-period">2019 – 2023</div>
+                </div>
+                <div>
+                    <span class="company">MET Bhujbal Knowledge City, Nashik</span> | CGPA: 7.58/10.0
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">Higher Secondary Certificate (HSC)</span>
+                    </div>
+                    <div class="job-period">2018 – 2019</div>
+                </div>
+                <div>
+                    <span class="company">K.T.H.M College, Nashik</span> | Percentage: 55.69%
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="job-title">Secondary School Certificate (SSC)</span>
+                    </div>
+                    <div class="job-period">2016 – 2017</div>
+                </div>
+                <div>
+                    <span class="company">Rachana Vidhyalaya, Nashik</span> | Percentage: 78.80%
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Certifications & Achievements -->
+    <div class="section two-column">
+        <div>
+            <h2>CERTIFICATIONS</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Journal of Interdisciplinary Cycle Research Certification</li>
+                    <li>National Skill Development Corporation Certificate in Web Development</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div>
+            <h2>ACHIEVEMENTS</h2>
+            <div class="section-content">
+                <ul>
+                    <li>Delivered 30+ web development projects with 100% on-time completion rate</li>
+                    <li>Achieved average 35% performance improvement across client websites</li>
+                    <li>Maintained 95% client retention through quality deliverables</li>
+                    <li>Developed reusable code components reducing development time by 25%</li>
+                    <li>Implemented security measures resulting in zero data breaches</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="section" style="margin-top: 30px; padding-top: 15px; border-top: 1px solid #eaeaea; font-size: 14px;">
+        <div style="text-align: center;">
+            <p><strong>Availability:</strong> Immediate • <strong>Notice Period:</strong> 30 Days • <strong>Employment Type:</strong> Full-time, Contract, Remote</p>
+            <p style="margin-top: 10px;">Portfolio with live project links available • Detailed project case studies upon request • Professional references provided</p>
+        </div>
+    </div>
+
+</body>
+</html>
