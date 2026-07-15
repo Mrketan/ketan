@@ -812,7 +812,16 @@ export function PortfolioLanding() {
                     <span className="font-semibold text-foreground/80 mr-1">Available in:</span>
                     Pune · Mumbai · Bengaluru · Hyderabad · Delhi NCR · Nagpur · Nashik
                   </span>
-                  <span className="contact-pill sm:col-span-2"><Globe2 size={16} /> Linkedin · Github · My Website</span>
+                  <div className="contact-pill sm:col-span-2 gap-3">
+                    <Globe2 size={16} className="shrink-0" />
+                    <span className="flex flex-wrap gap-2">
+                      <a href="https://www.linkedin.com/in/ketan-patil-webdeveloper/" target="_blank" rel="noreferrer" className="hover:text-foreground hover:underline transition-all">Linkedin</a>
+                      <span>·</span>
+                      <a href="https://github.com/Mrketan" target="_blank" rel="noreferrer" className="hover:text-foreground hover:underline transition-all">Github</a>
+                      <span>·</span>
+                      <a href="https://ketanpatil.netlify.app" target="_blank" rel="noreferrer" className="hover:text-foreground hover:underline transition-all">My Website</a>
+                    </span>
+                  </div>
                 </motion.div>
               </div>
               
@@ -1149,9 +1158,9 @@ export function PortfolioLanding() {
               <a className="neon-button neon-button-lg" href="mailto:patilketan1303@gmail.com?subject=Job%20Opportunity%20Inquiry&body=Hi%20Ketan,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20job%20opportunity%20with%20you.%0D%0A%0D%0ADetails:%0D%0A"><Mail size={18} /> <span suppressHydrationWarning>Email Ketan</span></a>
               <a className="ghost-button" href="tel:+917517305365"><Phone size={18} /> <span suppressHydrationWarning>Call Now</span></a>
               <div className="flex gap-3">
-                <a className="icon-link" href="#top" aria-label="Website"><Globe2 size={18} /></a>
-                <a className="icon-link" href="#top" aria-label="LinkedIn"><Linkedin size={18} /></a>
-                <a className="icon-link" href="#top" aria-label="GitHub"><Github size={18} /></a>
+                <a className="icon-link" href="https://ketanpatil.netlify.app" target="_blank" rel="noreferrer" aria-label="Website"><Globe2 size={18} /></a>
+                <a className="icon-link" href="https://www.linkedin.com/in/ketan-patil-webdeveloper/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+                <a className="icon-link" href="https://github.com/Mrketan" target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a>
               </div>
             </div>
           </div>

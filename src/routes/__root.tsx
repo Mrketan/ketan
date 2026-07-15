@@ -70,6 +70,10 @@ function RootShell({ children }: { children: React.ReactNode }) {
     "name": "Ketan Patil",
     "jobTitle": "Full Stack Web Developer",
     "url": "https://ketanpatil.netlify.app",
+    "sameAs": [
+      "https://www.linkedin.com/in/ketan-patil-webdeveloper/",
+      "https://github.com/Mrketan"
+    ],
     "description": "Ketan Patil is a Pune-based Full Stack Web Developer specializing in PHP, CodeIgniter 4, WordPress, React, MySQL, and REST APIs.",
     "address": {
       "@type": "PostalAddress",
