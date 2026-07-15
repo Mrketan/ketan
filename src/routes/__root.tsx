@@ -29,14 +29,20 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Ketan Patil | Full Stack Web Developer" },
-      { name: "description", content: "Portfolio of Ketan Patil, Full Stack Web Developer from Pune specializing in PHP, CodeIgniter, WordPress, React and APIs." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Ketan Patil | Full Stack Web Developer" },
-      { property: "og:description", content: "Fintech, LMS, e-commerce and business website portfolio by Ketan Patil." },
+      { title: "Ketan Patil - Full Stack Web Developer | PHP, React, MySQL" },
+      { name: "description", content: "Ketan Patil is a professional Full Stack Web Developer from Pune, Maharashtra. Expert in PHP, CodeIgniter, WordPress, React, MySQL, REST APIs, and e-commerce." },
+      { name: "keywords", content: "Ketan Patil, Full Stack Developer, Web Developer Pune, PHP Developer, CodeIgniter Expert, WordPress Developer, React Developer, Backend Developer, Frontend Developer, IT Professional, Software Engineer" },
+      { name: "author", content: "Ketan Patil" },
+      { name: "robots", content: "index, follow" },
+      { property: "og:title", content: "Ketan Patil - Full Stack Web Developer" },
+      { property: "og:description", content: "Ketan Patil is a professional Full Stack Web Developer from Pune. Hire me for scalable web apps, fintech, LMS, and custom e-commerce solutions." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:url", content: "https://ketanpatil.netlify.app/" },
+      { property: "og:image", content: "https://ketanpatil.netlify.app/kp-favicon.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Ketan Patil - Full Stack Web Developer" },
+      { name: "twitter:description", content: "Full Stack Web Developer from Pune specializing in PHP, React, and REST APIs." },
+      { name: "twitter:image", content: "https://ketanpatil.netlify.app/kp-favicon.png" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/kp-favicon.png" },
@@ -58,10 +64,31 @@ export const Route = createRootRoute({
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ketan Patil",
+    "jobTitle": "Full Stack Web Developer",
+    "url": "https://ketanpatil.netlify.app",
+    "description": "Ketan Patil is a Pune-based Full Stack Web Developer specializing in PHP, CodeIgniter 4, WordPress, React, MySQL, and REST APIs.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "email": "patilketan1303@gmail.com",
+    "telephone": "+917517305365"
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+        />
       </head>
       <body>
         {children}
